@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+</head>
+<body>
+    <!-- <div id ="app">
+        {{massage}}
+        <button @click='jock'></button>
+    </div>
+
+    <script>
+        new Vue({
+            el:'#app',
+            data:{
+                massage:'HELLO WORLD',
+            },
+            methods:{
+                jock:function(){
+                    axios.get('web.php', {
+                }).then(function (response) {
+                　　alert(response['data'])
+                }).catch(function (error) {
+                　　alert(error);
+                });
+                }
+            }
+        })
+
+
+    </script> -->
+<MonacoEditor
+
+        height="600"
+
+        language="json"
+
+        :code="code"
+
+        :editorOptions="options"
+
+        @mounted="onMounted"
+
+        @codeChange="onCodeChange"
+
+        >
+
+    </MonacoEditor>
+
+    
+</body>
+</html>

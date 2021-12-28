@@ -1,0 +1,84 @@
+#include<stdio.h>
+#include<string.h>
+
+int main()
+{
+    //字符串最后一位为'\0'，因此分配1001个空间 
+    char a1[1001]={'\0'}, b1[1001]={'\0'}; 
+    //sum保存每一位的运算结果，因为最高位可能还会进位，因此分配1001个空间  
+    int a2[1000], b2[1000], sum[1001];
+    
+    int i=1, j, num, k, r, w;
+    int len1, len2;
+    //输入测试用例个数 
+    scanf("%d", &num);
+    while(i<=num)
+    {
+        //初始化 
+        for(j=0;j<1000;j++)               
+            a2[j]=0;
+        for(j=0;j<1000;j++)
+            b2[j]=0;
+        for(j=0;j<1001;j++)
+            sum[j]=0;
+            
+        scanf("%s", &a1);
+        scanf("%s", &b1);
+        len1 = strlen(a1);
+        len2 = strlen(b1);
+        
+        //反转
+        //或是按照自己的习惯，只要从低位到高位，每一位都对其运算即可 
+        r=0;    
+        for(j=len1-1;j>=0;j--)               
+        {
+            a2[r]=a1[j]-48;
+            r++;
+        }
+        r=0;
+        for(j=len2-1;j>=0;j--)
+        {
+            b2[r]=b1[j]-48;
+            r++;
+        }
+        
+        //取字符串a1和b1中较长的字符串的个数 
+        if(len1<len2)                  
+            k=len2;
+        else
+            k=len1;
+        
+        //每一位进行加法运算 
+        for(j=0;j<k;j++)
+        {
+            sum[j]=a2[j]+b2[j]+sum[j];
+            //进位时的操作 
+            if(sum[j]>=10)
+            {
+                sum[j]=sum[j]-10;
+                w = j+1;
+                sum[w]++;
+            }
+        }
+        
+        //输出结果
+        printf("Case %d:\n", i);    
+        for(j=0;j<len1;j++)
+            printf("%d", a1[j]-48);
+        printf(" + ");
+        for(j=0;j<len2;j++)
+            printf("%d", b1[j]-48);
+        printf(" = ");
+        
+        if(sum[k])
+            k++;
+            
+        for(j=k-1;j>=0;j--)
+            printf("%d", sum[j]);
+        printf("\n");
+        if(i<num)
+            printf("\n");
+        i++;    
+    }
+    return 0;
+}

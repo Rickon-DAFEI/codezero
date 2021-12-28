@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>    
+        function arr1(){
+            var arr=[];
+            for(var i =0;i<10;i++){
+                arr.push(function(){
+                    return i;
+                });
+
+            }
+            return arr;
+        }
+        var arr2 = arr1();
+        console.log(arr2);
+        var c = arr2[0];
+        console.log(c);
+        i=3;
+        var b = arr2[8]();
+        console.log(b);
+    </script>
+</body>
+</html>

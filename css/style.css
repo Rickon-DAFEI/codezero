@@ -1,0 +1,45 @@
+*{
+    margin:0px 0px;
+    outline: none;
+}
+ol,ul{
+	list-style-type: none;
+}
+a {
+	text-decoration:none;
+	color: #337ab7;
+}
+body {
+    margin: 0;
+    transition: all .3s;
+	height: auto;
+	width:100%;
+}
+.head_left{
+	float: left;
+	color: #6a6a6a;
+	margin-right: 20px;
+}
+.head_right{
+	float: right;
+	color: #6a6a6a;
+	margin-right: 20px;
+}
+.pg-header {
+    position: fixed;
+    height: 44px;
+    right: 0;
+    left: 0;
+    z-index: 10;
+    background-color: white;
+	line-height: 44px;
+	top: 0;
+}
+.head_line {
+	width: 980px;
+	margin: 0 auto;
+}
+.head_left_Se{
+	border-bottom: 2px solid #6a6a6a;
+	z-index: 11;
+}

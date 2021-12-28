@@ -1,0 +1,28 @@
+<web-app>
+    <servlet>
+        <servlet-name>HelloWorld</servlet-name>
+        <servlet-class>HelloWorld</servlet-class>
+    </servlet>
+
+    <servlet-mapping>
+        <servlet-name>HelloWorld</servlet-name>
+        <url-pattern>/HelloWorld</url-pattern>
+    </servlet-mapping>
+
+    <servlet>
+        <servlet-name>MyFirstServlet</servlet-name>
+        <servlet-class>MyFirstServlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>MyFirstServlet</servlet-name>
+        <url-pattern>/MyFirstServlet</url-pattern>
+    </servlet-mapping>
+    <servlet>
+        <servlet-name>ReturnAnser</servlet-name>
+        <servlet-class>ReturnAnser</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>ReturnAnser</servlet-name>
+        <url-pattern>/ReturnAnser</url-pattern>
+    </servlet-mapping>
+</web-app>

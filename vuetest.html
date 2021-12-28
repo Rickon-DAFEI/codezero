@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+    <title>Document</title>
+    <style>
+        .style1{
+            color: aquamarine;
+        }
+        .style2{
+            color: blue;
+        }
+    </style>
+
+</head>
+<body>
+    <div id="app" >
+        <div v-for="each in typelis" @click="get_index(each.index)" v-bind:class="each.index==select_index?'style1':'style2'"   >
+            {{each.name}}
+        </div>
+    </div>
+    <script> 
+    var temp = {name:"123",index:2};
+        new Vue({
+            el:"#app",
+            data:{
+                select_index:2,
+                typelis:[{
+                    name:'123123',
+                    index:0,
+                },{
+                    name:'2',
+                    index:1,
+                },{
+                },temp],
+            },
+            methods:{
+                getmassage:function(){
+                    var that = this;
+                    alert(that.id);
+                },
+                get_index:function(e){
+                    this.select_index = e;
+                }
+            }
+
+        })
+    
+    </script>
+
+</body>
+</html>

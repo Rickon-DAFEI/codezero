@@ -1,0 +1,45 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>无标题文档</title>
+</head>
+<script language="javascript">
+function check()
+{
+	var str = login_form.account.value;
+	if(str=="123")
+	{//怎么能够阻止页面提交？
+		//alert("用户名为空，不能提交");
+		login_form.account.focus();	
+		add.innerHTML="用户名为空，不能提交";
+		return false;
+	}
+	return true;
+}
+</script>
+<body>
+	<form name = "login_form" action="" method="POST" autocomplete="off" onsubmit = "return check()">
+		<div class="inputBox">
+			<input type="text" name="account" required=""/>
+			<label>用户名</label>
+		</div>	
+		<div class="inputBox">
+			<input type="password" name="password" required=""/>
+			<span id ="add"></span>
+			<label>密码</label>
+		</div>
+		<input type="submit" name="" class="left" value="Submit"/>
+		<input type="button" name="" class="right Register" value="Register" onclick="showRegister();"/>
+	</form>
+	<form name="form1" action="" method="post"   onsubmit = "return check()">
+	用户名：<input  name="username" type="text" /><span id='info'>&nbsp;</span>
+	<br />
+	密码：<input name="mima" type="password" />
+	<input name="tijiao" type="submit" value="提交"/>
+
+
+</form>
+
+</body>
+</html>
